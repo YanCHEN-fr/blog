@@ -93,6 +93,8 @@ Modified by Yan CHEN
     ```
     roslaunch turtlebot_stage turtlebot_in_stage.launch 
     ```
+    
+    <img src="turtlebot_test.assets/Screenshot from 2021-03-21 13-19-18.png" alt="Screenshot from 2021-03-21 13-19-18.png" style="zoom: 25%;" />
 
 
 
