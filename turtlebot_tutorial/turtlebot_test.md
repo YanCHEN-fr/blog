@@ -9,9 +9,9 @@ Modified by Yan CHEN
 * ubuntu 18.04
 * ros melodic
 
-## Steps
+## Create workplace
 
-1. install independence packages
+1. Install independence packages
 
    ```commend
    $ sudo apt-get install ros-melodic-kobuki-*
@@ -70,31 +70,70 @@ Modified by Yan CHEN
    $ source ~/.bashrc 
    ```
 
-6. Open a new terminal on netbook and run ```$ roscore``` 
+## Launch turtlebot 
 
-7. Open a new terminal on netbook and run ```$ ls /dev/kobuki ``` for observing equipment. If not  and have a information like ```ls: cannot access '/dev/kobuki': No such file or directory```, run ```rosrun kobuki_ftdi create_udev_rules``` and unplug, replug robot and type ```ls /dev/kobuki ``` again. If display ```/dev/kobuki```, you are successful.
+1. Open a new terminal on netbook and run ```$ roscore``` 
 
-8. Launch turtlebot
+2. Open a new terminal on netbook and run ```$ ls /dev/kobuki ``` for observing equipment. If not  and have a information like ```ls: cannot access '/dev/kobuki': No such file or directory```, run ```rosrun kobuki_ftdi create_udev_rules``` and unplug, replug robot and type ```ls /dev/kobuki ``` again. If display ```/dev/kobuki```, you are successful.
+
+3. Launch turtlebot
 
    ```
    $ roslaunch turtlebot_bringup minimal.launch
    ```
 
-   
 
-9. Control turtlebot with keyboard
+## Keyboard control
+
+1. Control turtlebot with keyboard
 
    ```
    $ roslaunch turtlebot_teleop keyboard_teleop.launch
    ```
 
-10. rviz
+## Test camera
 
-    ```
-    roslaunch turtlebot_stage turtlebot_in_stage.launch 
-    ```
-    
-    <img src="turtlebot_test.assets/Screenshot from 2021-03-21 13-19-18.png" alt="Screenshot from 2021-03-21 13-19-18.png" style="zoom: 25%;" />
+* Install openni2_camera
+
+  ```
+  $ sudo apt-get install ros-melodic-openni2-*
+  $ rospack profile
+  ```
+
+* Set environtment path
+
+  ```
+  $ echo $TURTLEBOT_3D_SENSOR
+  # Output : asus_xtion_pro
+  
+  $ echo "export TURTLEBOT_3D_SENSOR=asus_xtion_pro" >> .bashrc
+  ```
+
+* Launch turtlebot
+
+  ```
+  roslaunch turtlebot_bringup minimal.launch
+  ```
+
+* Open color image
+
+  ```
+  $ rosrun image_view image_view image:=/camera/rgb/image_raw
+  ```
+
+* Open depth image
+
+  ```
+  $ rosrun image_view image_view image:=/camera/depth_registered/image_raw
+  ```
+
+## Example of Rviz
+
+```
+roslaunch turtlebot_stage turtlebot_in_stage.launch 
+```
+
+<img src="turtlebot_test.assets/Screenshot from 2021-03-21 13-19-18.png" alt="Screenshot from 2021-03-21 13-19-18.png" style="zoom: 25%;" />
 
 
 
