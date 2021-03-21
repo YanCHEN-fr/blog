@@ -88,9 +88,11 @@ Modified by Yan CHEN
    $ roslaunch turtlebot_teleop keyboard_teleop.launch
    ```
 
-10. Test asus_xtion_pro camera
+10. rviz
 
-    
+    ```
+    roslaunch turtlebot_stage turtlebot_in_stage.launch 
+    ```
 
 
 
