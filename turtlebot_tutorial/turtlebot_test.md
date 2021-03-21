@@ -74,9 +74,23 @@ Modified by Yan CHEN
 
 7. Open a new terminal on netbook and run ```$ ls /dev/kobuki ``` for observing equipment. If not  and have a information like ```ls: cannot access '/dev/kobuki': No such file or directory```, run ```rosrun kobuki_ftdi create_udev_rules``` and unplug, replug robot and type ```ls /dev/kobuki ``` again. If display ```/dev/kobuki```, you are successful.
 
-8. Open a new terminal on netbook and run ```roslaunch turtlebot_bringup minimal.launch``` for launch turtlebot.
+8. Launch turtlebot
 
-9. Open a new terminal on netbook and run ```roslaunch turtlebot_teleop keyboard_teleop.launch``` for controlling turtlebot with keyboard.
+   ```
+   $ roslaunch turtlebot_bringup minimal.launch
+   ```
+
+   
+
+9. Control turtlebot with keyboard
+
+   ```
+   $ roslaunch turtlebot_teleop keyboard_teleop.launch
+   ```
+
+10. Test asus_xtion_pro camera
+
+    
 
 
 
