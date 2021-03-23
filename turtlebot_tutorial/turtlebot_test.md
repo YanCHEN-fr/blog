@@ -6,8 +6,8 @@ Modified by Yan CHEN
 
 ## Requirement
 
-* ubuntu 18.04
-* ros melodic
+* Ubuntu 18.04
+* Ros melodic
 
 ## Create workplace
 
@@ -45,7 +45,7 @@ Modified by Yan CHEN
    $ git clone https://github.com/ros-drivers/joystick_drivers.git
    ```
 
-3. Copy kobuki and yujin_ocs packages to workplace turtlebot_ws/src
+3. Copy ```kobuki``` and ```yujin_ocs``` packages to workplace ```turtlebot_ws/src```
 
    ```
    $ mkdir -p ~/repos/
@@ -93,14 +93,14 @@ Modified by Yan CHEN
 
 ## Test camera
 
-* Install openni2_camera
+* Install ```openni2_camera```
 
   ```
   $ sudo apt-get install ros-melodic-openni2-*
   $ rospack profile
   ```
 
-* Set environtment path
+* Set environment path
 
   ```
   $ echo $TURTLEBOT_3D_SENSOR
@@ -109,10 +109,10 @@ Modified by Yan CHEN
   $ echo "export TURTLEBOT_3D_SENSOR=asus_xtion_pro" >> .bashrc
   ```
 
-* Launch turtlebot
+* Launch camera
 
   ```
-  roslaunch turtlebot_bringup minimal.launch
+  roslaunch openni2_launch openni2.launch depth_registration:=true
   ```
 
 * Open color image
