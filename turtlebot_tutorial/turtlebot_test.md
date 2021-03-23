@@ -43,6 +43,7 @@ Modified by Yan CHEN
    $ git clone https://github.com/toeklk/orocos-bayesian-filtering.git
    $ git clone https://github.com/turtlebot/turtlebot_msgs.git
    $ git clone https://github.com/ros-drivers/joystick_drivers.git
+   $ git clone https://github.com/ncnynl/turtlebot_viz
    ```
 
 3. Copy ```kobuki``` and ```yujin_ocs``` packages to workplace ```turtlebot_ws/src```
